@@ -29,9 +29,14 @@
     /* overflow-y: scroll;  */
 }
 
+html{
+    min-width: 100%;
+}
+
 body{
     min-height: 100vh;
     display: flex;
+    min-width: 100vw;
     flex-direction: column;
     overflow-y: scroll;
 }
@@ -132,7 +137,7 @@ body{
 
 .transform-text{
     height: 75vh;
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +146,7 @@ body{
 
 .card-img-transform{
     background-image: url(images/desktop/image-transform.jpg);
-    width: 50vw;
+    width: 50%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -207,7 +212,7 @@ body{
 
 .card-img-standout{
     background-image: url(images/desktop/image-stand-out.jpg);
-    width: 50vw;
+    width: 50%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -217,7 +222,7 @@ body{
 
 .standout-text{
     height: 75vh;
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -240,7 +245,7 @@ body{
 }
 
 .graphic-design{
-    width: 50vw;
+    width: 50%;
     background: url(images/desktop/image-graphic-design.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -251,7 +256,7 @@ body{
 }
 
 .photography{
-    width: 50vw;
+    width: 50%;
     background: url(images/desktop/image-photography.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -420,7 +425,7 @@ body{
 @media only screen and (max-width: 415px){
     .header-background{
         content: url(images/mobile/image-header.jpg);
-        width: 100vw;
+        width: 100%;
         top: -386px;
         height: 100%;
         /* height: max-content; */
@@ -446,7 +451,7 @@ body{
     }
 
     .transform-text{
-        width: 100vw;
+        width: 100%;
     }
 
     .text-container{
@@ -472,12 +477,12 @@ body{
 
     .card-img-standout{
         content: url(images/mobile/image-stand-out.jpg);
-        width: 100vw;
+        width: 100%;
         height: 100%;
     }
     
     .standout-text{
-        width: 100vw;
+        width: 100%;
     }
 
     .picture-cards{
@@ -489,13 +494,13 @@ body{
 
     .graphic-design{
         background-image: url(images/mobile/image-graphic-design.jpg);
-        width: 100vw;
+        width: 100%;
         height: 74vh;
     }
 
     .photography{
         background-image: url(images/mobile/image-photography.jpg);
-        width: 100vw;
+        width: 100%;
         height: 74vh;
     }
 
@@ -524,7 +529,7 @@ body{
 
     .image-cards{
         height: 50vh;
-        width: 100vw;
+        width: 100%;
         position: relative;
         top: 175px;
         display: flex;
@@ -589,7 +594,7 @@ body{
         left: 45px; 
         top: 120px;
         height: 30vh;
-        width: calc(100vw - 20%);
+        width: calc(100% - 20%);
         margin: 0 auto;
         background-color: white;
         display: flex;
@@ -636,5 +641,9 @@ body{
     .dropdown-container{
         display: unset;
     }
+
+    img{
+        max-width: 100%
+     }
 
 }
