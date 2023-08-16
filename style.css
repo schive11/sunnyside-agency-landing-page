@@ -41,6 +41,10 @@ body{
     height: 100vh;
 }
 
+.hamburger-button{
+    visibility: hidden;
+}
+
 .header-background{
     position: relative;
     z-index: -2;
@@ -409,11 +413,15 @@ body{
     filter: brightness(0) saturate(100%) invert(100%) sepia(93%) saturate(28%) hue-rotate(27deg) brightness(106%) contrast(108%);;
 }
 
+.dropdown-container{
+    display: none;
+}
+
 @media only screen and (max-width: 415px){
     .header-background{
         content: url(images/mobile/image-header.jpg);
         width: 100vw;
-        top: -346px;
+        top: -386px;
         height: 100%;
         /* height: max-content; */
     }
@@ -421,11 +429,11 @@ body{
     .header-container h1{
         font-size: 36px;
         text-align: center;
-        top: 200px;
+        top: 150px;
     }
 
     .arrow{
-        top: 270px;
+        top: 225px;
     }
 
     .card-img-transform{
@@ -549,4 +557,84 @@ body{
         position: relative;
         top: 175px;
     }
+
+    .header-links{
+        /* margin: none; */
+        display: none;
+    }
+
+    .hamburger-button{
+        background: none;
+        border: none;
+        position: relative;
+        left: 15px;
+    }
+
+    .header-logo img{
+        width: 180px;
+        height: 36px;
+        position: relative;
+        left: -15px;
+    }
+
+    .hamburger-button{
+        visibility: visible;
+        position: absolute;
+        right: -302px;
+    }
+
+    .dropdown-content{
+        z-index: 2;
+        position: absolute;
+        left: 45px; 
+        top: 120px;
+        height: 30vh;
+        width: calc(100vw - 20%);
+        margin: 0 auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        color: var(--dark-grayish-blue);
+
+    }
+
+    .menu-triangle{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 96px;
+        right: 38px;
+        border-top: 24px solid transparent;
+	    border-right: 24px solid white;
+    }
+
+    #contact{
+        width: 30%;
+        margin: 0 auto;
+        height: 36px;
+        background-color: var(--yellow);
+        border: none;
+        border-radius: 18px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: 'Fraunces', serif; 
+    }
+
+    #contact:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+    .dropdown-content p:hover{
+        cursor: pointer;
+        color: var(--dark-blue);
+    }
+
+    .dropdown-container{
+        display: unset;
+    }
+
 }
